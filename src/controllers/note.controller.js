@@ -29,7 +29,7 @@ export const getNotes = async (req, res, next) => {
 }
 
 /**
- * Controller to get all notes
+ * Controller to get notes by id
  * @param  {object} req - request object
  * @param {object} res - response object
  * @param {Function} next
@@ -37,6 +37,20 @@ export const getNotes = async (req, res, next) => {
 export const getNotesById = async (req, res, next) => {
   try {
     await NoteService.getNotesById(req,res);
+  } catch (error) {
+    next(error);
+  }
+}
+
+/**
+ * Controller to update notes by id
+ * @param  {object} req - request object
+ * @param {object} res - response object
+ * @param {Function} next
+ */
+export const updateById = async (req, res, next) => {
+  try {
+    await NoteService.updateById(req,res);
   } catch (error) {
     next(error);
   }

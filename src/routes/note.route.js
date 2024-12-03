@@ -10,4 +10,6 @@ router.get('/',noteController.getNotes);
 
 router.get('/:id',noteController.getNotesById);
 
+router.put('/:id',noteController.updateById);
+
 export default router;
