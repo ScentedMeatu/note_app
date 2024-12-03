@@ -22,3 +22,16 @@ export const createNote = async(req, res) =>{
       });
     }
 }
+
+export const getAllNotes = async(req, res)=>{
+  const data = await Note.find((err,data)=>{
+    if(err){
+      console.log(err);
+    } else {
+      return data;
+    }
+  })
+  if(data){
+    res.send(data);
+  }
+}
