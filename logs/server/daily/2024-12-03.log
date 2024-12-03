@@ -26,5 +26,35 @@ info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T0
 info: Connected to the database. {"timestamp":"2024-12-03T09:56:59.352Z"}
 info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T09:57:57.246Z"}
 info: Connected to the database. {"timestamp":"2024-12-03T09:57:59.127Z"}
-info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T11:02:49.268Z"}
-info: Connected to the database. {"timestamp":"2024-12-03T11:02:51.330Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:09:56.017Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:09:58.011Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to string failed for value "{ new: true }" (type Object) at path "title"
+    at model.Query.exec (/Users/apple/Desktop/backend_project/note_app/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/apple/Desktop/backend_project/note_app/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5) 
+    url - /api/v1/notes/674ed6308d0be043a19d1834 
+    method - PUT 
+    IP - ::1
+   {"timestamp":"2024-12-03T10:10:11.522Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:13:22.388Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:13:24.418Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:13:35.360Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:13:42.177Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:13:43.942Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:16:18.073Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:16:20.177Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:17:36.031Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:17:41.579Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:17:43.312Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:17:46.981Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:17:48.212Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:17:52.478Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:18:08.557Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:22:52.268Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:22:54.267Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T10:26:17.718Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T10:26:19.769Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-12-03T11:00:54.796Z"}
+info: Connected to the database. {"timestamp":"2024-12-03T11:00:56.870Z"}

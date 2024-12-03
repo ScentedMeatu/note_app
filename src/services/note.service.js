@@ -52,3 +52,18 @@ export const getNotesById = async(req, res)=>{
     });
   }
 }
+
+export const updateById = async (req, res)=>{
+  const work = await Note.findByIdAndUpdate(req.params.id,req.body); 
+  if(work){
+    res.status(HttpStatus.ACCEPTED).json({
+      code: HttpStatus.ACCEPTED,
+      message: `note with id ${req.params.id} updated`
+    })
+  } else {
+    res.status(HttpStatus.NOT_FOUND).json({
+      code: HttpStatus.NOT_FOUND,
+      message: `no notes with id ${req.params.id} found`
+    });
+  }
+}
