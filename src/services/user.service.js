@@ -1,39 +1,27 @@
 import User from '../models/user.model';
+import HttpStatus from 'http-status-codes';
+const bcrypt = require('bcrypt');
 
-//get all users
-export const getAllUsers = async () => {
-  const data = await User.find();
-  return data;
-};
-
-//create new user
-export const newUser = async (body) => {
-  const data = await User.create(body);
-  return data;
-};
-
-//update single user
-export const updateUser = async (_id, body) => {
-  const data = await User.findByIdAndUpdate(
-    {
-      _id
-    },
-    body,
-    {
-      new: true
+//register user
+export const registerUser = async(req, res) =>{
+  const { first_name, last_name, email, password } = req.body;
+  const present = await User.findOne({email});
+    if (present) {
+      res.status(HttpStatus.CONFLICT).json({
+        code: HttpStatus.CONFLICT,
+        message: 'User already exist'
+      });
+    } else {
+      const hashValue = await bcrypt.hash(password, 10);
+      await User.create({
+        first_name,
+        last_name,
+        email,
+        password: hashValue
+      });
+      res.status(HttpStatus.CREATED).json({
+        code: HttpStatus.CREATED,
+        message: 'User registered successfully'
+      });
     }
-  );
-  return data;
-};
-
-//delete single user
-export const deleteUser = async (id) => {
-  await User.findByIdAndDelete(id);
-  return '';
-};
-
-//get single user
-export const getUser = async (id) => {
-  const data = await User.findById(id);
-  return data;
-};
+}
