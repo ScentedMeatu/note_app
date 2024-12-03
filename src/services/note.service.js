@@ -32,6 +32,23 @@ export const getAllNotes = async(req, res)=>{
     }
   })
   if(data){
-    res.send(data);
+    res.status(HttpStatus.ACCEPTED).send(data);
+  }else{
+    res.status(HttpStatus.NOT_FOUND).json({
+      code: HttpStatus.NOT_FOUND,
+      message: 'no notes found'
+    });
+  }
+}
+
+export const getNotesById = async(req, res)=>{
+  const data = await Note.findById(req.params.id)
+  if(data){
+    res.status(HttpStatus.ACCEPTED).json(data);
+  } else {
+    res.status(HttpStatus.NOT_FOUND).json({
+      code: HttpStatus.NOT_FOUND,
+      message: `no notes with id ${req.params.id} found`
+    });
   }
 }

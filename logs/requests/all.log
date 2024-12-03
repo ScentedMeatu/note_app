@@ -81,3 +81,19 @@ info: ::1 - - [03/Dec/2024:09:38:11 +0000] "POST /api/v1/notes/create HTTP/1.1" 
 
 info: ::1 - - [03/Dec/2024:09:38:19 +0000] "GET /api/v1/notes/ HTTP/1.1" 200 294 "-" "PostmanRuntime/7.43.0"
 
+info: ::1 - - [03/Dec/2024:09:53:20 +0000] "GET /api/v1/notes/674eccec2ca09a382f0454fb HTTP/1.1" 202 143 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:53:25 +0000] "GET /api/v1/notes/ HTTP/1.1" 202 294 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:53:30 +0000] "GET /api/v1/notes/674ed183ec23fa3d66ed915e HTTP/1.1" 202 148 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:53:36 +0000] "GET /api/v1/notes/674ed183ec23fa3d66ed915 HTTP/1.1" 500 145 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:55:31 +0000] "GET /api/v1/notes/674ed183ec23fa3d66ed915e HTTP/1.1" 202 148 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:57:45 +0000] "POST /api/v1/notes/ HTTP/1.1" 404 47 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:58:08 +0000] "POST /api/v1/notes/create HTTP/1.1" 201 50 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:09:58:16 +0000] "GET /api/v1/notes/ HTTP/1.1" 202 192 "-" "PostmanRuntime/7.43.0"
+

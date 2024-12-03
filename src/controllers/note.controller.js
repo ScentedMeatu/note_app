@@ -27,3 +27,17 @@ export const getNotes = async (req, res, next) => {
     next(error);
   }
 }
+
+/**
+ * Controller to get all notes
+ * @param  {object} req - request object
+ * @param {object} res - response object
+ * @param {Function} next
+ */
+export const getNotesById = async (req, res, next) => {
+  try {
+    await NoteService.getNotesById(req,res);
+  } catch (error) {
+    next(error);
+  }
+}

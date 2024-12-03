@@ -8,4 +8,6 @@ router.post('/create',noteController.createNote);
 
 router.get('/',noteController.getNotes);
 
+router.get('/:id',noteController.getNotesById);
+
 export default router;

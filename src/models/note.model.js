@@ -5,10 +5,10 @@ const noteSchema = new Schema(
         title: {
             type: String
         },
-        Desc: {
+        desc: {
             type: String
         },
-        Color: {
+        color: {
             type: String
         }
     },
