@@ -252,3 +252,11 @@ info: ::1 - - [03/Dec/2024:11:01:23 +0000] "PUT /api/v1/notes/674ed6308d0be043a1
 
 info: ::1 - - [03/Dec/2024:11:01:32 +0000] "GET /api/v1/notes/674ed6308d0be043a19d1834 HTTP/1.1" 202 190 "-" "PostmanRuntime/7.43.0"
 
+info: ::1 - - [03/Dec/2024:11:21:22 +0000] "GET /api/v1/notes/ HTTP/1.1" 202 192 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:11:21:29 +0000] "DELETE /api/v1/notes/674ed6308d0be043a19d1834 HTTP/1.1" 202 70 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:11:21:34 +0000] "GET /api/v1/notes/674ed6308d0be043a19d1834 HTTP/1.1" 404 72 "-" "PostmanRuntime/7.43.0"
+
+info: ::1 - - [03/Dec/2024:11:21:39 +0000] "GET /api/v1/notes/ HTTP/1.1" 202 2 "-" "PostmanRuntime/7.43.0"
+

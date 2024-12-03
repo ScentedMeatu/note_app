@@ -23,6 +23,7 @@ export const createNote = async(req, res) =>{
     }
 }
 
+//get all notes
 export const getAllNotes = async(req, res)=>{
   const data = await Note.find((err,data)=>{
     if(err){
@@ -41,6 +42,7 @@ export const getAllNotes = async(req, res)=>{
   }
 }
 
+//get notes by id
 export const getNotesById = async(req, res)=>{
   const data = await Note.findById(req.params.id)
   if(data){
@@ -53,14 +55,31 @@ export const getNotesById = async(req, res)=>{
   }
 }
 
+//update notes by id
 export const updateById = async (req, res)=>{
   const work = await Note.findByIdAndUpdate(req.params.id,req.body); 
   if(work){
     res.status(HttpStatus.ACCEPTED).json({
       code: HttpStatus.ACCEPTED,
       message: `note with id ${req.params.id} updated`
-    })
+    });
   } else {
+    res.status(HttpStatus.NOT_FOUND).json({
+      code: HttpStatus.NOT_FOUND,
+      message: `no notes with id ${req.params.id} found`
+    });
+  }
+}
+
+//delete notes by id
+export const deleteById = async (req, res)=>{
+  const data = await Note.findByIdAndDelete(req.params.id);
+  if(data){
+    res.status(HttpStatus.ACCEPTED).json({
+      code: HttpStatus.ACCEPTED,
+      message: `note with id ${req.params.id} deleted`
+    });
+  }else {
     res.status(HttpStatus.NOT_FOUND).json({
       code: HttpStatus.NOT_FOUND,
       message: `no notes with id ${req.params.id} found`

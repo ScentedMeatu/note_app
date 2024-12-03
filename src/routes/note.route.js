@@ -12,4 +12,6 @@ router.get('/:id',noteController.getNotesById);
 
 router.put('/:id',noteController.updateById);
 
+router.delete('/:id',noteController.deleteById);
+
 export default router;

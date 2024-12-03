@@ -55,3 +55,17 @@ export const updateById = async (req, res, next) => {
     next(error);
   }
 }
+
+/**
+ * Controller to delete notes by id
+ * @param  {object} req - request object
+ * @param {object} res - response object
+ * @param {Function} next
+ */
+export const deleteById = async (req, res, next) => {
+  try {
+    await NoteService.deleteById(req,res);
+  } catch (error) {
+    next(error);
+  }
+}
