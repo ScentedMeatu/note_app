@@ -25,3 +25,29 @@ export const registerUser = async(req, res) =>{
       });
     }
 }
+
+//login user
+export const loginUser = async (req, res) =>{
+  const {email, password} = req.body;
+  const data = await User.findOne({email});
+    if(data){
+      const valid = await bcrypt.compare(password, data.password);
+      if(valid){
+        res.status(HttpStatus.ACCEPTED).json({
+          code: HttpStatus.ACCEPTED,
+          name: `${data.first_name} ${data.last_name}`,
+          message: 'login sucessfull'
+        });
+      } else {
+        res.status(HttpStatus.CONFLICT).json({
+          code: HttpStatus.CONFLICT,
+          message: 'wrong credentials'
+        });
+      } 
+    } else {
+      res.status(HttpStatus.NOT_FOUND).json({
+        code: HttpStatus.NOT_FOUND,
+        message: 'user doesnt exist'
+      });
+    }
+}
